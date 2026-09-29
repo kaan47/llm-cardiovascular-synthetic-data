@@ -17,7 +17,6 @@ The study asks whether general-purpose large language models (LLMs) can generate
 ├── run_analysis.py                complete analysis; writes all tables to results/tables
 ├── make_figures.py                main and supplementary figures; writes to figures/
 ├── requirements.txt
-├── CITATION.cff
 └── LICENSE
 ```
 
@@ -42,33 +41,17 @@ Python 3.10 or later is required. The results in the article were produced with 
 
 ```bash
 pip install -r requirements.txt
-python run_analysis.py          # about 35 minutes on one CPU core
-python make_figures.py          # about 4 minutes
+python run_analysis.py
+python make_figures.py
 ```
 
 `run_analysis.py --jobs N` fits models in parallel, and `run_analysis.py --quick` runs the whole pipeline with reduced settings as a functional check (its numbers differ from those in the article). Intermediate results are cached in `results/cache/`; an interrupted run resumes where it stopped, and deleting the folder forces a complete recomputation. `make_figures.py --dpi 600` produces figures at higher resolution.
 
 All random processes use fixed seeds. With the pinned package versions the scripts reproduce every number in the article; other versions may cause small differences in the last decimal places.
 
-## Analysis overview
-
-| Step | Method | Output |
-| --- | --- | --- |
-| Data audit | duplicates, category codes, within-dataset diversity, repeated templates | Table S3 |
-| Univariate fidelity | Kolmogorov–Smirnov tests with a sample-size-matched threshold, SD ratios, category frequencies | Tables S4–S7 |
-| Relational fidelity | correlation deviation, sign agreement, bivariate regression | Tables S8–S9 |
-| Higher-order structure | risk maps of the four most informative predictors, SHAP interaction values | Table S9 |
-| Memorization and disclosure risk | exact and near-exact copies of real records, distance to the closest record, attribute inference | Tables S3, S10 |
-| Internal validation | 11 machine learning frameworks, nested cross-validation with identical records grouped | Table S11 |
-| External validation | training and tuning on synthetic data, testing on 918 unique real patients | Tables 5, S12, S13, S17 |
-| Benchmark | real data, Gaussian copula, sequential CART and independent marginals on identical held-out real patients; learning curve | Tables S15–S16 |
-| Summary and tests | run-level comparison of the models | Tables 4, S14 |
-
-Real records are used only as test data. Hyperparameters are always selected by cross-validation within the training data of the respective analysis.
-
 ## Citation
 
-If you use the code or the synthetic cohorts, please cite the article (see `CITATION.cff`) and the reference dataset:
+If you use the code or the synthetic cohorts, please cite the article (The link to the article will be added here once it is published) and the reference dataset:
 
 - Siddhartha M. Heart disease dataset (comprehensive). IEEE Dataport (2020). https://doi.org/10.21227/dz4t-cm36
 - Janosi A, Steinbrunn W, Pfisterer M, Detrano R. Heart disease. UCI Machine Learning Repository (1988). https://doi.org/10.24432/C52P4X
@@ -76,7 +59,3 @@ If you use the code or the synthetic cohorts, please cite the article (see `CITA
 ## License
 
 The code is released under the MIT License. The synthetic cohorts are released under the Creative Commons Attribution 4.0 International License (CC BY 4.0); see `data/README.md`.
-
-## Contact
-
-Tuba Gunel, Department of Molecular Biology and Genetics, Faculty of Science, Istanbul University, gunel@istanbul.edu.tr
