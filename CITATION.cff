@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software or the synthetic cohorts, please cite the article below."
+title: "Large Language Models as Clinical Data Synthesizers: code and synthetic cohorts"
+authors:
+  - family-names: Kara
+    given-names: Kaan
+    orcid: "https://orcid.org/0009-0007-0789-4077"
+    affiliation: "Istanbul University"
+  - family-names: Gunel
+    given-names: Tuba
+    orcid: "https://orcid.org/0000-0003-3514-5210"
+    affiliation: "Istanbul University"
+repository-code: "https://github.com/kaan47/llm-cardiovascular-synthetic-data"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Large Language Models as Clinical Data Synthesizers"
+  authors:
+    - family-names: Kara
+      given-names: Kaan
+    - family-names: Gunel
+      given-names: Tuba
+  journal: "International Journal of Data Science and Analytics"
+  year: 2026

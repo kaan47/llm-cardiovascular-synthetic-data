@@ -1,0 +1,18 @@
+Based on the provided Data Profile and Statistical Summary, generate a synthetic version of a real-world cardiovascular cohort. Generate 200 records. Return the dataset as CSV.
+
+Data Profile and Statistical Summary
+
+| Feature Name (Code) | Data Type | Description / Units | Mean (Std. Dev.) | Min / Max |
+|---|---|---|---|---|
+| Age | Numeric | Age in years | 53.72 (±9.36) | 28.0 / 77.0 |
+| Sex | Binary | 1 = Male, 0 = Female | 0.76 (±0.42) | 0.0 / 1.0 |
+| Chest Pain Type | Nominal | 1: Typical, 2: Atypical, 3: Non-anginal, 4: Asymptomatic | 3.23 (±0.94) | 1.0 / 4.0 |
+| Resting BP | Numeric | Resting blood pressure in mm Hg | 132.15 (±18.37) | 0.0 / 200.0 |
+| Cholesterol | Numeric | Serum cholesterol in mg/dl | 210.36 (±101.42) | 0.0 / 603.0 |
+| Fasting Blood Sugar | Binary | > 120 mg/dl (1 = True, 0 = False) | 0.21 (±0.41) | 0.0 / 1.0 |
+| Resting ECG | Nominal | 0: Normal, 1: ST-T Abnormality, 2: LV Hypertrophy | 0.70 (±0.87) | 0.0 / 2.0 |
+| Max Heart Rate | Numeric | Maximum heart rate achieved | 139.73 (±25.52) | 60.0 / 202.0 |
+| Exercise Angina | Binary | Exercise induced angina (1 = Yes, 0 = No) | 0.39 (±0.49) | 0.0 / 1.0 |
+| Oldpeak | Numeric | ST depression induced by exercise | 0.92 (±1.09) | -2.6 / 6.2 |
+| ST Slope | Nominal | 1: Upsloping, 2: Flat, 3: Downsloping | 1.62 (±0.61) | 0.0 / 3.0 |
+| Target (Class) | Binary | 1 = Heart Disease, 0 = Normal | 0.53 (±0.50) | 0.0 / 1.0 |
