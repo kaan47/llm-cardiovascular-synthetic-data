@@ -2,7 +2,7 @@
 
 ## Reference dataset (not included)
 
-Heart Disease Dataset (Comprehensive), IEEE Dataport, https://doi.org/10.21227/dz4t-cm36. Save the file as `data/real_data.csv`. It contains 1,190 records, of which 918 are unique; 272 Statlog records duplicate Cleveland records. Missing cholesterol values are coded as 0 in 172 records.
+Heart Disease Dataset (Comprehensive), IEEE Dataport, https://doi.org/10.21227/dz4t-cm36. Save the file as `data/real_data.csv`.
 
 ## Synthetic cohorts
 
